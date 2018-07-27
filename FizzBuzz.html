@@ -8,9 +8,21 @@
             <h1>Algoritmos para exercício Fizz Buzz</h1>
             <nav>
                 <ul>
-                    <li>While</li>
-                    <li>For</li>
-                    <li>ForEach</li>
+                    <li>
+                        Conditionals
+                        <ul>
+                            <li>Ternary Operator</li>
+                            <li>If/Else</li>
+                        </ul>
+                    </li>
+                    <li>
+                        Loop
+                        <ul>
+                            <li>While</li>
+                            <li>For</li>
+                            <li>ForEach</li>
+                        </ul>    
+                    </li>
                 </ul>    
             </nav>
         </header>
@@ -39,7 +51,6 @@
             }
 
             function verifyFizzBuzz(){
-                console.log('teste');
                 var y = document.getElementById('numberInput').value;
                 var result = y % 3 == 0 && y % 5 == 0 ? "Fizz Buzz" : y % 3 == 0 ? "Fizz" : y % 5 == 0 ? "Buzz" : y;
                 console.log(result);
