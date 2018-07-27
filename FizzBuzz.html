@@ -16,6 +16,9 @@
         </header>
 
         <div class="box-main">
+            <label for="numberInput">Digite um número inteiro</label>
+            <input type="number" id="numberInput">
+            <button onclick="verifyFizzBuzz()">Verify</button>
         </div>
 
         <footer>
@@ -35,9 +38,12 @@
                 console.log(x);  
             }
 
-            var y = 17;
-            var result = y % 3 == 0 && y % 5 == 0 ? "Fizz Buzz" : y % 3 == 0 ? "Fizz" : y % 5 == 0 ? "Buzz" : y;
-            console.log(result);
+            function verifyFizzBuzz(){
+                console.log('teste');
+                var y = document.getElementById('numberInput').value;
+                var result = y % 3 == 0 && y % 5 == 0 ? "Fizz Buzz" : y % 3 == 0 ? "Fizz" : y % 5 == 0 ? "Buzz" : y;
+                console.log(result);
+            }
        </script>
     </body>
 </html>
