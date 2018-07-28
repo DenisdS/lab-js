@@ -11,26 +11,28 @@
                     <li>
                         Conditionals
                         <ul>
-                            <li>Ternary Operator</li>
-                            <li>If/Else</li>
+                            <li>
+                                <h2>Ternary Operator</h2>
+                            </li>
+                            <li>
+                                </h2>If/Else</h2>
+                            </li>
                         </ul>
-                    </li>
-                    <li>
-                        Loop
-                        <ul>
-                            <li>While</li>
-                            <li>For</li>
-                            <li>ForEach</li>
-                        </ul>    
                     </li>
                 </ul>    
             </nav>
         </header>
 
         <div class="box-main">
+            <h2>Verify if the number result Fizz Buzz</h2>
+                    
             <label for="numberInput">Digite um número inteiro</label>
             <input type="number" id="numberInput">
-            <button onclick="verifyFizzBuzz()">Verify</button>
+
+            <label>Choice the way to test:</label>
+                
+            <button id="ifElse" onclick="verifyFizzBuzz(ifElse);">If/Else</button>
+            <button id="ternary" onclick="verifyFizzBuzz(ternary);">Ternary Operator</button>  
         </div>
 
         <footer>
@@ -38,22 +40,35 @@
         </footer>
 
         <script>
-            var x = 30;
+            function verifyFizzBuzz(el){
+                switch(el){
+                    case ifElse: 
+                        var numberInput = document.getElementById('numberInput').value;
+                        if(numberInput % 3 === 0 && numberInput % 5 === 0){
+                            console.log("Fizz Buzz");
+                        }else if(numberInput % 3 === 0){
+                            console.log("Fizz");
+                        }else if(numberInput % 5 === 0){
+                            console.log("Buzz");
+                        }else{
+                            console.log(numberInput);  
+                        }
+                        document.getElementById('numberInput').value = numberInput.replace(numberInput, '');
+                        document.getElementById("ifElse").checked = false;
+                        break;
 
-            if(x % 3 === 0 && x % 5 === 0){
-                console.log("Fizz Buzz");
-            }else if(x % 3 === 0){
-                console.log("Fizz");
-            }else if(x % 5 === 0){
-                console.log("Buzz");
-            }else{
-                console.log(x);  
-            }
+                    case ternary:
+                        var numberInput = document.getElementById('numberInput').value;
+                        var result = numberInput % 3 == 0 && numberInput % 5 == 0 ? "Fizz Buzz" : 
+                        numberInput % 3 == 0 ? "Fizz" : numberInput % 5 == 0 ? "Buzz" : numberInput;
+                        console.log(result);
+                        document.getElementById('numberInput').value = '';
+                        document.getElementById("ternary").checked = false;
+                        break;
 
-            function verifyFizzBuzz(){
-                var y = document.getElementById('numberInput').value;
-                var result = y % 3 == 0 && y % 5 == 0 ? "Fizz Buzz" : y % 3 == 0 ? "Fizz" : y % 5 == 0 ? "Buzz" : y;
-                console.log(result);
+                    default:
+                        console.log("Error! Wasn't  possible execute!")
+                }                        
             }
        </script>
     </body>
