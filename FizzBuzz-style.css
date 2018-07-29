@@ -1,1 +1,57 @@
-*{text-decoration: none; list-style: none; padding: 0 auto; margin: 0 auto;}
+*{text-decoration: none; list-style: none; padding: 0; margin: 0 auto; font-family: arial;}
+
+html, body{float: left; width: 100%; height: auto;}
+
+h1{font-size: 18px; margin-left: 15%;}
+h2{font-size: 16px; margin-left: 5%;}
+h3{font-size: 14px;}
+h1, h2, h3{padding-top: 10px;}
+
+header{
+        float: left;
+        width: 100%; 
+        height: 50px; 
+        background: #0489B1;
+}
+    h1{
+        color: #fff; 
+        padding-top: 15px;
+    }
+    nav{
+        float: left;
+        width: 70%; 
+        height: auto; 
+        margin: 14px 0 0 15%;
+        padding-bottom: 12px;
+    }
+        nav ul{
+            display: block;           
+        }
+        nav ul li{
+            padding-bottom: 5px;
+        }
+        nav ul li h2{
+            width: 100px;
+            padding-left: 5px;
+            border-bottom: 4px #2FA2FA solid;
+            border-left: 4px #2FA2FA solid;
+        }
+        nav ul li ul li{
+            float: left;
+            width: 14%;
+            display: inline;
+            border-bottom: 4px #2FA2FA solid;
+        }
+        nav ul li ul li:first-child{
+            border-left: 4px #2FA2FA solid;
+            border-right: 4px #2FA2FA solid;
+            margin-left: 150px;
+        }
+        nav ul h3{
+            padding-left: 5%;
+        }
+.box-main{
+    width: 70%;
+    height: auto;
+    margin: 15%;
+}
