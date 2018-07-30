@@ -33,8 +33,8 @@
 
             <label>Choice the way to test:</label>
                 
-            <button id="ifElse" onclick="verifyFizzBuzz(ifElse);">If/Else</button>
-            <button id="ternary" onclick="verifyFizzBuzz(ternary);">Ternary Operator</button>  
+            <button id="ifElse" onclick="verifyFizzBuzz(ifElse);">If/Else</button><!-- Call function VerifyFizzBuzz with ifElse parameter -->
+            <button id="ternary" onclick="verifyFizzBuzz(ternary);">Ternary Operator</button> <!-- Call function VerifyFizzBuzz with ternary parameter -->
         </div>
 
         <footer>
@@ -42,34 +42,32 @@
         </footer>
 
         <script>
-            function verifyFizzBuzz(el){
-                switch(el){
-                    case ifElse: 
-                        var numberInput = document.getElementById('numberInput').value;
-                        if(numberInput % 3 === 0 && numberInput % 5 === 0){
+            function verifyFizzBuzz(el){//Function actived per onClick of button(ifElse) or button(ternary)
+                switch(el){// Receive the parameter of function for verify which type conditional apply
+                    case ifElse: //Case execute button ifElse
+                        var numberInput = document.getElementById('numberInput').value;//Receive value inserted into the form
+                        if(numberInput % 3 === 0 && numberInput % 5 === 0){//Verify if number is divisible per 3 and 5
                             console.log("Fizz Buzz");
-                        }else if(numberInput % 3 === 0){
+                        }else if(numberInput % 3 === 0){//Verify if number is divisible per 3
                             console.log("Fizz");
-                        }else if(numberInput % 5 === 0){
+                        }else if(numberInput % 5 === 0){//Verify if number is divisible per 5
                             console.log("Buzz");
-                        }else{
+                        }else{//Case number isn't divisible per 3 or 5
                             console.log(numberInput);  
                         }
-                        document.getElementById('numberInput').value = numberInput.replace(numberInput, '');
-                        document.getElementById("ifElse").checked = false;
+                        document.getElementById('numberInput').value = numberInput.replace(numberInput, '');//Reset the input
                         break;
 
-                    case ternary:
-                        var numberInput = document.getElementById('numberInput').value;
+                    case ternary: //Case execute button ternary
+                        var numberInput = document.getElementById('numberInput').value;//Receive value inserted into the form
                         var result = numberInput % 3 == 0 && numberInput % 5 == 0 ? "Fizz Buzz" : 
-                        numberInput % 3 == 0 ? "Fizz" : numberInput % 5 == 0 ? "Buzz" : numberInput;
+                        numberInput % 3 == 0 ? "Fizz" : numberInput % 5 == 0 ? "Buzz" : numberInput; //Execute the same tests for verify number result FizzBuzz, but using ternary operator
                         console.log(result);
-                        document.getElementById('numberInput').value = '';
-                        document.getElementById("ternary").checked = false;
+                        document.getElementById('numberInput').value = '';//reset the input
                         break;
 
                     default:
-                        console.log("Error! Wasn't  possible execute!")
+                        console.log("Error! Wasn't  possible execute!")//Is returned case the switch don't get execute ifElse or ternary
                 }                        
             }
        </script>
