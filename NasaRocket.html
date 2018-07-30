@@ -10,7 +10,8 @@
         </header>
 
         <div class="box-main">
-            <button onclick="launchRocket()">START</button>
+            <button id="useFor" onclick="launchRocket(useFor);">START</button>
+            <button id="useWhile" onclick="launchRocket(useWhile);">START</button>
         </div>
 
         <footer>
@@ -18,33 +19,60 @@
         </footer>
 
         <script>
-            function launchRocket(){
+            function launchRocket(el){
                 var time = 60;
 
-                while(time > -1){
-                    switch(time){
-                        case 50:
-                            console.log("Orbiter transfers from ground to internal power");
-                            break;
-                        case 31:
-                            console.log("Ground launch sequencer is go for auto sequence start");
-                            break;
-                        case 16:
-                            console.log("Activate launch pad sound suppression system");
-                            break;
-                        case 10:
-                            console.log("Activate main engine hydrogen burnoff system");
-                            break;
-                        case 6:
-                            console.log("Main engine start");
-                            break;
-                        case 0:
-                            console.log("Solid rocket booster ignition and liftoff!");
-                            break;
-                        default:
-                            console.log("T-" + time + " seconds");
+                if(el === useWhile){
+                    while(time > -1){
+                        switch(time){
+                            case 50:
+                                console.log("Orbiter transfers from ground to internal power");
+                                break;
+                             case 31:
+                                console.log("Ground launch sequencer is go for auto sequence start");
+                                break;
+                            case 16:
+                                console.log("Activate launch pad sound suppression system");
+                                break;
+                            case 10:
+                                console.log("Activate main engine hydrogen burnoff system");
+                                break;
+                            case 6:
+                                console.log("Main engine start");
+                                break;
+                            case 0:
+                                console.log("Solid rocket booster ignition and liftoff!");
+                                break;
+                            default:
+                                console.log("T-" + time + " seconds");
+                        }
+                        time--;
                     }
-                    time--;
+                }else if(el === useFor){
+                    for(var i = -1; time > i; time--){
+                        switch(time){
+                            case 50:
+                                console.log("Orbiter transfers from ground to internal power");
+                                break;
+                             case 31:
+                                console.log("Ground launch sequencer is go for auto sequence start");
+                                break;
+                            case 16:
+                                console.log("Activate launch pad sound suppression system");
+                                break;
+                            case 10:
+                                console.log("Activate main engine hydrogen burnoff system");
+                                break;
+                            case 6:
+                                console.log("Main engine start");
+                                break;
+                            case 0:
+                                console.log("Solid rocket booster ignition and liftoff!");
+                                break;
+                            default:
+                                console.log("T-" + time + " seconds");
+                        }
+                    }
                 }
             }
         </script>
