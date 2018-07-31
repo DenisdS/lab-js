@@ -10,8 +10,8 @@
         </header>
 
         <div class="box-main">
-            <button id="useFor" onclick="launchRocket(useFor);">START</button>
-            <button id="useWhile" onclick="launchRocket(useWhile);">START</button>
+            <button id="useFor" onclick="launchRocket(useFor);">START</button><!-- Call function launchRocket with useFor parameter -->
+            <button id="useWhile" onclick="launchRocket(useWhile);">START</button><!-- Call function launchRocket with useWhile parameter -->
         </div>
 
         <footer>
@@ -19,38 +19,38 @@
         </footer>
 
         <script>
-            function launchRocket(el){
-                var time = 60;
+            function launchRocket(el){//Function actived per onClick of button(useFor) or button(useWhile)
+                var time = 60;//Start var with value 60
 
-                if(el === useWhile){
-                    while(time > -1){
-                        switch(time){
-                            case 50:
+                if(el === useWhile){//Verify if parameter received is useWhile
+                    while(time > -1){//Loop will be execute while value of time is bigger then -1
+                        switch(time){// Receive the parameter of function for apply Space Launch System
+                            case 50:// When arrive in number 50
                                 console.log("Orbiter transfers from ground to internal power");
                                 break;
-                             case 31:
+                             case 31:// When arrive in number 31
                                 console.log("Ground launch sequencer is go for auto sequence start");
                                 break;
-                            case 16:
+                            case 16: // When arrive in number 16
                                 console.log("Activate launch pad sound suppression system");
                                 break;
-                            case 10:
+                            case 10: // When arrive in number 10
                                 console.log("Activate main engine hydrogen burnoff system");
                                 break;
-                            case 6:
+                            case 6: // When arrive in number 6
                                 console.log("Main engine start");
                                 break;
-                            case 0:
+                            case 0: // When arrive in number 0
                                 console.log("Solid rocket booster ignition and liftoff!");
                                 break;
-                            default:
+                            default: // Numbers that aren't mention in test
                                 console.log("T-" + time + " seconds");
                         }
-                        time--;
+                        time--; //Decrement the value of time
                     }
-                }else if(el === useFor){
-                    for(var i = -1; time > i; time--){
-                        switch(time){
+                }else if(el === useFor){ //Function actived per onClick of button(useFor) or button(useFor)
+                    for(var i = -1; time > i; time--){//Loop will be execute while value of time is bigger then -1
+                        switch(time){//Here the code is the same that the used in before conditional
                             case 50:
                                 console.log("Orbiter transfers from ground to internal power");
                                 break;
