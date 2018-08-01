@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+
+        <title>Chair Theater</title>
+    </head>
+    <body>
+        <header>
+            <h1>organizing chairs theater</h1>
+        </header>
+
+        <div class="box-main">
+            <button id="useFor" onclick="organizeTheater()">Organize</button><!-- Call function launchRocket with useFor parameter -->
+        </div>
+
+        <footer>
+            <h3>©2018 - DenisdS - Todo os saberes compartilhados.</h3>
+        </footer>
+
+        <script>
+            function organizeTheater(){
+                var row = 26;
+                var chair = 100;
+
+                for(var r = 0; r < row; r++){
+                    for(var c = 0; c < chair; c++){
+                        console.log([r] + "-" + [c]);
+                    }
+                }
+
+            }
+        </script>
+    </body>
+</html>
