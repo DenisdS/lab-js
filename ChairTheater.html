@@ -22,9 +22,9 @@
                 var row = 26;
                 var chair = 100;
 
-                for(var r = 0; r < row; r++){
-                    for(var c = 0; c < chair; c++){
-                        console.log([r] + "-" + [c]);
+                for(var r = 0; r < row; r++){//First Loop responsible for organize row. It is execute once, after wait the next Loop be executed
+                    for(var c = 0; c < chair; c++){// Loop secondary responsible for organize chairs, It loop is completely executed, after this is returned execution for first Loop
+                        console.log([r] + "-" + [c]);////Show the Rows of theater (r) and Chairs of theater (c).
                     }
                 }
 
