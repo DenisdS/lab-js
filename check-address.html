@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <title>Check Endereço</title>
+  </head>
+    <body>
+      
+    <button type="button" onClick='checkEndereco(endereco)'>Check</button>
+      
+    <script>
+      const endereco = {
+        rua: "Rua dos pinheiros",
+        numero: 1293,
+        bairro: "Centro",
+        cidade: "São Paulo",
+        uf: "SP"
+      }
+
+      const checkEndereco = (endereco) => {
+        console.log(`O usuário mora em ${endereco.cidade} / ${endereco.uf}, no bairro ${endereco.bairro}, na rua "${endereco.rua}" com nº ${endereco.numero}.`)
+      }
+    </script>
+  </body>
+</html>
