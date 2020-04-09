@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+
+        <title>Chair Theater</title>
+    </head>
+    <body>
+        <header>
+            <h1>organizing chairs theater</h1>
+        </header>
+
+        <div class="box-main">
+            <button id="useFor" onclick="organizeTheater()">Organize</button><!-- Call function launchRocket with useFor parameter -->
+        </div>
+
+        <footer>
+            <h3>©2018 - DenisdS - Todo os saberes compartilhados.</h3>
+        </footer>
+
+        <script>
+            function organizeTheater(){
+                var row = 26;
+                var chair = 100;
+
+                for(var r = 0; r < row; r++){//First Loop responsible for organize row. It is execute once, after wait the next Loop be executed
+                    for(var c = 0; c < chair; c++){// Loop secondary responsible for organize chairs, It loop is completely executed, after this is returned execution for first Loop
+                        console.log([r] + "-" + [c]);////Show the Rows of theater (r) and Chairs of theater (c).
+                    }
+                }
+
+            }
+        </script>
+    </body>
+</html>
